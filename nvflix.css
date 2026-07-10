@@ -11,12 +11,22 @@ body{
 
 .logo{
     padding-left: 50px;
+    animation: spin 8s linear infinite;
 }
 
 .logo a{
     color: white;
     text-decoration: none;
     font-size: 40px;
+}
+
+@keyframes spin{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
 }
 
 .navbar-items{
@@ -56,14 +66,39 @@ body{
 
 .photo-content{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
+    padding-top: 30px;
     
-
 }
 
-.photo-content div{
-    display: flex;
-    justify-content: center;
-    background-color: green;
-    border: solid 5px red;
+.photo-container{
+    position:relative;
+    color: white;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.photo-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.photo-container:hover .photo-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+}
+
+.photo-content img{
+    max-width: 100%;
+}
+
+.photo-content img:hover{
+    opacity: 0.5;
+
 }
