@@ -56,6 +56,22 @@ body{
     color: rgba(0, 128, 0, 0.591);
 }
 
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: grey;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 .content video{
     max-width: 90%;
@@ -129,11 +145,25 @@ body{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+    .logo{
+        padding: 0px;
+    }
+
+
+    .dropdown {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .dropdown-content{
+        padding-top: 50px;
+        width: 100%;
+        }
+
     .navbar-items{
-        
         display: none;
-        padding-right: 50px;
-        align-items: center;
     }
 
     .overlay{
@@ -144,6 +174,20 @@ body{
         max-width: 100%;
         background-color: black;
     }
+
+    .photo-content{
+        display: grid;
+        grid-template-columns: auto;
+        padding-top: 30px;
+        
+    }
+
+    .photography-format{
+        display: grid;
+        grid-template-columns: auto;
+        padding-top: 30px;
+    }
+
 }
 
 
