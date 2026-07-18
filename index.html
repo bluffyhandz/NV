@@ -18,28 +18,28 @@
             <a href="index.html">NVFLXKS</a>
         </div>
         <div class="navbar-items">
-            <a href="portfolio.html">Portfolio</a>
+            <a href="portfolio.html">Portfolio</a>  
             <a href="#">About</a>
             <a href="#">Contact</a>
-
-        </div>
-
-        <div class="dropdown">=
-            <div class="dropdown-content">
-                <a href="portfolio.html">PORTFOLIO</a>
-                <a href="#">ABOUT</a>
-                <a href="#">CONTACT</a>
-
-            </div>
-        </div>
-
+            
+        </div>    
+        <span class="mobile-nav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     </div>
+
+    <div id="mobile-nav" class="dropdown">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="dropdown-content">
+            <a href="portfolio.html">Portfolio</a>  
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+      </div>
 
     <div class="content">
         <video src="yacht.mp4" autoplay loop muted></video>
 
         <div class="overlay">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies urna sed odio mattis rhoncus. Donec euismod dui vulputate viverra scelerisque. Ut imperdiet diam id viverra pharetra. Ut sed tristique metus, a auctor ex. Cras eu libero bibendum, tempus orci non, bibendum lacus. Cras nisl tellus, lobortis ut arcu id, malesuada ultricies ex. Aenean sit amet ex et est luctus condimentum sit amet ac neque. Fusce egestas mattis quam pulvinar ultricies. Nunc aliquet rutrum placerat. Vestibulum euismod magna quis sodales rutrum. Vestibulum quis sem aliquam, ornare dui at, hendrerit eros. Phasellus in sapien vel quam gravida condimentum in at elit. Phasellus fringilla semper enim et ultricies.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies urna sed odio mattis rhoncus. Donec euismod dui vulputate viverra scelerisque. Ut imperdiet diam id viverra pharetra. Ut sed tristique metus, a auctor ex. Cras eu libero bibendum, tempus orci non, bibendum lacus. Cras nisl tellus, lobortis ut arcu id, malesuada ultricies ex. Aenean sit amet ex et est luctus condimentum sit amet ac neque. Fusce egestas mattis quam pulvinar ultricies. Nunc aliquet rutrum placerat. Vestibulum euismod magna quis sodales rutrum. Vestibulum quis sem aliquam, ornare dui at, hendrerit eros.</p>
         </div>
     </div>
 
@@ -51,8 +51,8 @@
     <div class="footer">
         <h2>Useful Links</h2>
         <a href="portfolio.html">Portfolio</a>
-        <span>ABOUT</span>
-        <span>CONTACT</span>
+        <a href="portfolio.html">About</a>
+        <a href="portfolio.html">Contact</a>
         <br>
         <p>&copy; NVFLXKS. All Rights Reserved</p>
     </div>
@@ -76,4 +76,14 @@
     }
     </script>
 -->
+
+<script>
+    function openNav() {
+      document.getElementById("mobile-nav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("mobile-nav").style.width = "0%";
+    }
+    </script>
 </html>

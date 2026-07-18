@@ -14,7 +14,6 @@ body{
 
 .logo{
     padding-left: 50px;
-    animation: spin 8s linear infinite;
 }
 
 .logo a{
@@ -29,15 +28,6 @@ body{
     transition: color 1s;
 }
 
-@keyframes spin{
-    from{
-        transform: rotateY(0deg);
-    }
-    to{
-        transform: rotateY(360deg);
-    }
-}
-
 .navbar-items{
     display: flex;
     padding-right: 50px;
@@ -49,28 +39,57 @@ body{
     color:white;
     transition: color 1s;
     padding-left: 50px;
-    font-size: 20px;
+    font-size: 20px;    
 }
 
 .navbar-items a:hover{
     color: rgba(0, 128, 0, 0.591);
 }
 
+.mobile-nav{
+    display: none;
+}
+
 .dropdown {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .dropdown-content {
     position: relative;
-    cursor: pointer;
-    display: none;
-}
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
   
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: grey;
-}
-  
-.dropdown:hover .dropdown-content {
+  .dropdown a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
     display: block;
-}
+    transition: 0.3s;
+  }
+  
+  .dropdown a:hover, .dropdown a:focus {
+    color: #f1f1f1;
+  }
+  
+  .dropdown .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
 
 
 .content video{
@@ -146,21 +165,22 @@ body{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
+    .mobile-nav{
+        display: inline-block;
+    }
+
+    .navbar{
+        justify-content: space-between;
+    }
+
     .logo{
-        padding: 0px;
+        padding: 4px;
     }
 
-
-    .dropdown {
-        position: relative;
-        cursor: pointer;
-        display: flex;
+    .logo a{
+        font-size: 30px;
     }
 
-    .dropdown-content{
-        padding-top: 50px;
-        width: 100%;
-        }
 
     .navbar-items{
         display: none;
