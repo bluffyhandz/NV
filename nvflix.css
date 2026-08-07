@@ -133,11 +133,15 @@ body{
     position:relative;
     color: white;
     max-width: 100%;
-    padding: 75px;
+    text-align: center;
+}
+
+.photo-container a{
+    opacity: 0.7;
 }
 
 .photo-container a:hover{
-    opacity: 0.3;
+    opacity: 1;
 }
 
 .photo-text{
@@ -145,17 +149,13 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 48px;
+    font-size: 120px;
     text-align: center;
-    visibility: hidden;
-}
-
-.photo-container:hover .photo-text{
-    visibility: visible;
 }
 
 .photo-content img{
-    max-width: 100%;
+    max-width: 85%;
+    opacity: 0.7;
 }
 
 .photo-content img:hover{
@@ -166,15 +166,22 @@ body{
     display: grid;
     grid-template-columns: auto auto;
     padding-top: 30px;
+    gap: 50px;
 }
 
 .photography-format img{
-    max-width: 100%;
+    max-width: 85%;
 }
 
 .about-content{
     display: flex;
     justify-content: space-between;
+    gap: 50px;
+    text-align: center;
+}
+
+#showcase{
+    opacity: 1;
 }
 
 
@@ -261,6 +268,14 @@ input[type=text], select, textarea {
         padding-top: 30px;
     }
 
+    .photo-text{
+        font-size: 35px;
+    }
+
+    .about-content{
+        flex-direction: column;
+    }
+
 }
 
 
@@ -269,11 +284,45 @@ input[type=text], select, textarea {
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+    .mobile-nav{
+        display: inline-flex;
+    }
+
+    .navbar-items{
+        display: none;
+    }
+
+    .photo-text{
+        font-size: 35px;
+    }
+
+    .about-content{
+        flex-direction: column;
+    }
+}
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+
+    .mobile-nav{
+        display: none;
+    }
+
+    .navbar-items{
+        display: flex;
+    }
+
+    .photo-text{
+        font-size: 70px;
+    }
+
+    .about-content{
+        flex-direction: row;
+    }
+}
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
