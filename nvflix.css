@@ -107,6 +107,7 @@ body{
     padding-top: 50px;
     display: grid;
     grid-template-columns: auto auto;
+    align-items: center;
 }
 
 .content-header{
@@ -132,7 +133,6 @@ i{
 }
 .content-image img{
     max-width: 100%;
-    
 }
 
 .content-info{
@@ -212,6 +212,12 @@ i{
     justify-content: space-between;
     gap: 50px;
     text-align: center;
+    align-items: center;
+
+}
+
+.about-content img{
+    max-width: 75%;
 }
 
 .contact-footer{
@@ -348,9 +354,14 @@ input[type=text], select, textarea {
     border-radius: 20px;
 }
 
-.content-image img{
-    max-width: 80%;
-    
+
+.content-image{
+    padding-top: 120px;
+}
+
+
+.about-image{
+    max-width: 85%;
 }
 
 }
